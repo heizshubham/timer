@@ -70,10 +70,10 @@ button:hover {
     padding: 30px;
     font-size: 100px;
     
-    color: #E7F2F8;
+    color: #202020;
     
 }
 
 #clock.paused {
-    color: #202020;
+    color: #E7F2F8;
 }
