@@ -1,0 +1,75 @@
+:root {
+    --primary-color: #202020;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    color: #202020;
+    background-color: #FFA384;
+
+    width: 550px;
+    padding: 20px;
+    border-radius: 0.75rem;
+
+    display: grid;
+}
+
+h1 {
+    font-size: 50px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+button {
+    font: 20px 'Poppins', sans-serif;
+    padding: 8px;
+   
+    color: #202020;
+    background-color: #FFA384;
+    
+    font-weight: 700;
+    border: 3px solid #202020;
+    border-radius: 1.5rem;
+    width: 150px;
+
+}
+
+button:hover {
+    cursor: pointer;
+    border: 3px solid #E7F2F8;
+    color: #E7F2F8;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+#clock {
+    margin: 30px auto;
+    padding: 30px;
+    font-size: 100px;
+    
+    color: #202020;
+    
+}
