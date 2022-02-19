@@ -5,6 +5,7 @@ function escopo() {
     const reset = document.getElementById('reset')
 
     let seconds = 0
+    let isRunning 
 
     function makeTimer(seconds) {
         let data = new Date(seconds * 1000)
@@ -15,20 +16,27 @@ function escopo() {
     };
 
     function startClock() {
-        setInterval(function(){
+        clock.classList.remove('paused')
+
+        if (!isRunning) {
+        isRunning = setInterval(function(){
             seconds++
             clock.innerHTML = makeTimer(seconds)
         }, 1000)
+        }
     }
-
-    function pauseClock(isRunning) {
+    function pauseClock() {
+        clock.classList.add('paused')
+        
         setTimeout(function() {
             clearInterval(isRunning)
-        }, 1000)
+            isRunning = false
+        })
     }
 
     function resetClock() {
         seconds = 0
+        clock.innerHTML = makeTimer(seconds)
     }
 
     start.addEventListener('click', startClock)
